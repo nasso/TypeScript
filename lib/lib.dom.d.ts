@@ -1611,6 +1611,10 @@ interface RequestInit {
     referrerPolicy?: ReferrerPolicy;
     /** An AbortSignal to set request's signal. */
     signal?: AbortSignal | null;
+    /** Can only be "half". Must be specified when the body is a ReadableStream. */
+    duplex?: "half",
+    /** The priority of the request ("auto" by default). */
+    priority?: "auto" | "high" | "low",
     /** Can only be null. Used to disassociate request from any Window. */
     window?: null;
 }
